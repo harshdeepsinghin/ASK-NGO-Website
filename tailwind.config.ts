@@ -12,7 +12,7 @@ export default {
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         logo: ['Edo', 'Kalam', 'cursive'],
-        headline: ['Kalam', 'cursive'],
+        'headline-base': ['Kalam', 'cursive'],
         code: ['monospace'],
       },
       letterSpacing: {

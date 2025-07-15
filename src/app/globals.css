@@ -80,6 +80,9 @@
     @apply bg-background text-foreground;
   }
   .font-headline {
-    @apply tracking-headline;
+    @apply font-headline-base tracking-headline;
+  }
+  .font-logo-text {
+    @apply font-logo tracking-headline;
   }
 }
