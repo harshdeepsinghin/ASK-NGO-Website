@@ -1,12 +1,14 @@
+
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, HandHeart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,9 +43,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <HandHeart className="h-7 w-7 text-primary" />
-          <span className="font-logo font-bold text-lg tracking-headline">Ardas Samaj Kalyan</span>
+        <Link href="/">
+          <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={160} height={40} className="object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -66,9 +67,8 @@ export function Header() {
             <SheetContent side="right">
               <div className="p-4">
                  <div className="mb-6">
-                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-                      <HandHeart className="h-7 w-7 text-primary" />
-                      <span className="font-logo font-bold text-lg tracking-headline">ASK NGO</span>
+                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                      <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={160} height={40} className="object-contain" />
                     </Link>
                 </div>
                 <nav className="flex flex-col gap-6">

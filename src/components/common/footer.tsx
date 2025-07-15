@@ -1,5 +1,7 @@
-import { HandHeart, Mail, MapPin, Phone } from "lucide-react";
+
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -9,9 +11,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <HandHeart className="h-8 w-8 text-primary" />
-              <span className="font-logo font-bold text-xl tracking-headline">Ardas Samaj Kalyan</span>
+            <Link href="/" className="mb-4 inline-block">
+               <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={180} height={45} className="object-contain" />
             </Link>
             <p className="text-muted-foreground max-w-md">
               A non-profit organization committed to empowering marginalized communities through education, skill development, and comprehensive support.
