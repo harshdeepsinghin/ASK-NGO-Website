@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
-        headline: ['Kalam', 'cursive'],
+        headline: ['Edo', 'Kalam', 'cursive'],
         code: ['monospace'],
       },
       colors: {
