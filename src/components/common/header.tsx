@@ -43,7 +43,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <HandHeart className="h-7 w-7 text-primary" />
-          <span className="font-bold text-lg font-headline">Ardas Samaj Kalyan</span>
+          <span className="font-logo font-bold text-lg tracking-headline">Ardas Samaj Kalyan</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -68,7 +68,7 @@ export function Header() {
                  <div className="mb-6">
                    <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                       <HandHeart className="h-7 w-7 text-primary" />
-                      <span className="font-bold text-lg font-headline">ASK NGO</span>
+                      <span className="font-logo font-bold text-lg tracking-headline">ASK NGO</span>
                     </Link>
                 </div>
                 <nav className="flex flex-col gap-6">

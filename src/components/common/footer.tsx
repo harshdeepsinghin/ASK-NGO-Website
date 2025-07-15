@@ -11,7 +11,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <HandHeart className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl font-headline">Ardas Samaj Kalyan</span>
+              <span className="font-logo font-bold text-xl tracking-headline">Ardas Samaj Kalyan</span>
             </Link>
             <p className="text-muted-foreground max-w-md">
               A non-profit organization committed to empowering marginalized communities through education, skill development, and comprehensive support.
