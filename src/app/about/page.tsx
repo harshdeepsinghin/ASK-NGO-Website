@@ -3,17 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, Goal, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 
-const teamMembers = [
+const leadershipMessages = [
   {
-    name: "Founder Name",
-    role: "Founder & President",
-    message: "Our journey began with a simple belief: that every individual deserves a chance to build a better life. We are committed to turning this belief into reality, one empowered person at a time.",
+    name: "Rajveer Singh",
+    role: "President & Founder",
+    message: "With aims for the growth of our country, ASK trust was established for women empowerment, livelihood generation for the underprivileged, especially jail inmates and women self-help groups. We also work for the development of the youth. Our aim is not just teaching people but to empower them with the abilities to have access to all the basic necessities of life, enabling them to earn respect and dignity for themselves and their future. The backbone of ASK trust is its Team, Sponsors, Volunteers, and all supporters.",
     imageUrl: "https://placehold.co/100x100.png"
   },
   {
-    name: "Guardian Name",
+    name: "Guardian's Message",
     role: "Guardian & Advisor",
-    message: "Guiding this organization is a privilege. We focus on sustainable, impactful programs that create lasting change and foster self-reliance within our communities.",
+    message: "Ever since its inception, the Ex-students of Carman School along with Mr. and Mrs. Rajveer Singh have been taking up various tasks by which society in general and the poor and needy in particular have benefitted. We at ASK are extremely grateful to God and to the many people in this State who have come forward to help us achieve the goals we have set from time to time. Thank you and may God Bless us all.",
     imageUrl: "https://placehold.co/100x100.png"
   },
 ];
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
             <h2 className="font-headline text-3xl md:text-4xl font-semibold text-center mb-12">Messages from Our Leadership</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                {teamMembers.map((member) => (
+                {leadershipMessages.map((member) => (
                     <Card key={member.name} className="flex flex-col items-center text-center">
                         <CardHeader>
                             <Avatar className="w-24 h-24 border-4 border-primary/50">

@@ -4,7 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CheckCircle2 } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle2, Group, HandHeart, Users } from "lucide-react";
 
 const programs = [
   {
@@ -33,6 +34,30 @@ const programs = [
   },
 ];
 
+const trainingAreas = {
+    technical: [
+        "LED Light Making", "Mobile Charger Making", "Powerbank Making",
+        "Solar Lantern Making", "Solar Street light Making", "Diwali Lights Making"
+    ],
+    softSkills: [
+        "EDP Training", "Self Branding", "Right Use Of Social Media", "Digital Marketing"
+    ],
+    others: [
+        "Jewellery Making", "Agarbati Making", "Jute Bag Making",
+        "Home Decor Products", "Candle Making", "Cow Dung Products", "Herbal Soap Making"
+    ]
+};
+
+const beneficiaries = [
+    "Inmates of Haldwani, Dehradun, Haridwar, and Bareilly Jails",
+    "Inmates of Bal Sudhar Greh, Haridwar",
+    "Inmates of Nari Niketan, Dehradun",
+    "Inmates of Bal Sampreshan Greh, Dehradun",
+    "Students of Rajkiye Purv Madhamik Vidhalaya, Dehradun",
+    "Women Self-Help Groups in various villages (Mithiberi, Teliwala, Rampur danda, etc.)",
+    "Provided RPL trainings with THSC"
+];
+
 export default function ProgramsPage() {
   return (
     <div className="animate-in fade-in duration-500">
@@ -47,6 +72,7 @@ export default function ProgramsPage() {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="font-headline text-3xl font-semibold text-center mb-8">Core Program Areas</h2>
           <Accordion type="single" collapsible className="w-full">
             {programs.map((program) => (
               <AccordionItem key={program.id} value={program.id}>
@@ -98,6 +124,68 @@ export default function ProgramsPage() {
           </Accordion>
         </div>
       </section>
+
+      <section className="py-16 md:py-24 bg-secondary/50">
+        <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="font-headline text-3xl font-semibold text-center mb-8">Our Skill Development Trainings</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Technical Trainings</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2">
+                            {trainingAreas.technical.map(skill => (
+                                <li key={skill} className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" /><span className="text-muted-foreground">{skill}</span></li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Soft Skills</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2">
+                            {trainingAreas.softSkills.map(skill => (
+                                <li key={skill} className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" /><span className="text-muted-foreground">{skill}</span></li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Other Skills</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <ul className="space-y-2">
+                            {trainingAreas.others.map(skill => (
+                                <li key={skill} className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" /><span className="text-muted-foreground">{skill}</span></li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
+      </section>
+
+       <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="font-headline text-3xl font-semibold text-center mb-8">Our Beneficiaries</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <ul className="space-y-3 columns-1 md:columns-2">
+                        {beneficiaries.map((beneficiary, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <Users className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                            <span className="text-muted-foreground">{beneficiary}</span>
+                          </li>
+                        ))}
+                    </ul>
+                </CardContent>
+            </Card>
+        </div>
+       </section>
     </div>
   );
 }

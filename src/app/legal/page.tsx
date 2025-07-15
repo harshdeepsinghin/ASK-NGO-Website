@@ -8,26 +8,31 @@ const legalInfo = [
             { label: "Registered under", value: "Indian Trusts Act, 1882" },
             { label: "Registration Number", value: "IV-040300188" },
             { label: "Date of Registration", value: "August 24, 2021" },
+            { label: "12A Registration Number", value: "AAHTA4244RE20221" },
+            { label: "Date of 12A Registration", value: "16-04-2022" },
         ],
     },
     {
         title: "Tax Information",
         details: [
-            { label: "PAN Number", value: "AABTAXXXXX" },
+            { label: "PAN Number", value: "AAHTA4244R" },
         ],
     },
     {
         title: "Tax Exemption Approvals",
         details: [
-            { label: "Section 12A", value: "Approved - AADTAXXXXXAXXXXXX" },
-            { label: "Section 80G", value: "Approved - AADTAXXXXXAXXXXXX" },
-            { label: "Details", value: "Donations are eligible for a 50% tax deduction under section 80G of the Income Tax Act." },
+            { label: "Section 80G Approval", value: "Provisionally approved" },
+            { label: "80G URN", value: "AAHTA4244RF20221" },
+            { label: "Date of 80G Approval", value: "16-04-2022" },
+            { label: "Validity", value: "Approved for Assessment Years 2023-24 to 2025-26" },
+            { label: "Details", value: "Donations are eligible for tax deduction under section 80G of the Income Tax Act." },
         ],
     },
     {
         title: "CSR Compliance",
         details: [
-            { label: "CSR Registration Number", value: "CSR000XXXXX" },
+            { label: "CSR Registration Number", value: "CSR00032760" },
+            { label: "Date of Registration", value: "27-06-2022" },
             { label: "Compliance Status", value: "Fully compliant for receiving CSR funds." },
         ],
     },
@@ -70,7 +75,7 @@ export default function LegalPage() {
                         ))}
                     </div>
                      <div className="mt-12 text-center text-sm text-muted-foreground bg-secondary/50 p-4 rounded-md">
-                        <p><strong>Disclaimer:</strong> The PAN and registration numbers have been partially masked for security reasons. Complete details can be provided upon request for due diligence purposes. Please contact us for any further information.</p>
+                        <p><strong>Disclaimer:</strong> Full legal documents can be provided upon request for due diligence purposes. Please contact us for any further information.</p>
                     </div>
                 </div>
             </section>
