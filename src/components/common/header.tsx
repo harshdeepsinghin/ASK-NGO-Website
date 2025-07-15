@@ -65,15 +65,11 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="p-4">
-                <div className="flex justify-between items-center mb-6">
+                 <div className="mb-6">
                    <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                       <HandHeart className="h-7 w-7 text-primary" />
                       <span className="font-bold text-lg font-headline">ASK NGO</span>
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-                      <X className="h-6 w-6" />
-                      <span className="sr-only">Close menu</span>
-                    </Button>
                 </div>
                 <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
