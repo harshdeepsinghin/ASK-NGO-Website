@@ -78,7 +78,7 @@ export default function AboutPage() {
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground">To rehabilitate prisoners, support women's SHGs, guide at-risk youth, and build strong community partnerships for sustainable social change.</p>
-                    </IFrame>
+                    </CardContent>
                 </Card>
              </div>
         </div>
