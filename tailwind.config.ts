@@ -14,6 +14,9 @@ export default {
         headline: ['Edo', 'Kalam', 'cursive'],
         code: ['monospace'],
       },
+      letterSpacing: {
+        headline: '0.05em',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
