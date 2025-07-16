@@ -10,8 +10,11 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link href="/" className="mb-4 inline-block">
+            <Link href="/" className="mb-4 inline-flex items-center gap-2">
                <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={45} height={12} className="object-contain" />
+                <span className="font-logo-text text-xl font-bold text-foreground">
+                  Ardas Samaj Kalyan
+                </span>
             </Link>
             <p className="text-muted-foreground max-w-md">
               A non-profit organization committed to empowering marginalized communities through education, skill development, and comprehensive support.
