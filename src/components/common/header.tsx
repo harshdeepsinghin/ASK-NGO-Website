@@ -43,7 +43,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/">
-          <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={160} height={40} className="object-contain" />
+          <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={80} height={20} className="object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -67,7 +67,7 @@ export function Header() {
               <div className="p-4">
                  <div className="mb-6">
                    <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                      <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={160} height={40} className="object-contain" />
+                      <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={80} height={20} className="object-contain" />
                     </Link>
                 </div>
                 <nav className="flex flex-col gap-6">

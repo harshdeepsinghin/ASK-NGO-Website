@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link href="/" className="mb-4 inline-block">
-               <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={180} height={45} className="object-contain" />
+               <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={90} height={23} className="object-contain" />
             </Link>
             <p className="text-muted-foreground max-w-md">
               A non-profit organization committed to empowering marginalized communities through education, skill development, and comprehensive support.
