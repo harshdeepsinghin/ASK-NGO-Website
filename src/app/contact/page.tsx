@@ -6,11 +6,12 @@ export default function ContactPage() {
     const address = "33/4/1 Patel Nagar, Saharanpur Road, Dehradun, Uttarakhand";
     const email = "asktrust.in@gmail.com";
     const phone = "+91 7017075603";
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    const googleMapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.062569278917!2d77.9943440755653!3d30.32081197478583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b230485c27d%3A0x89e73c381d4a464e!2sPatel%20Nagar%2C%20Dehradun%2C%20Uttarakhand%20248001%2C%20India!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus`;
+
 
     return (
         <div className="animate-in fade-in duration-500">
-            <section className="bg-primary/10 py-12">
+            <section className="bg-primary/10 py-8 md:py-12">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="font-headline text-4xl md:text-5xl font-bold">Contact Us</h1>
                     <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
@@ -61,20 +62,18 @@ export default function ContactPage() {
                             <CardHeader>
                                 <CardTitle className="font-headline">Find Us on the Map</CardTitle>
                             </CardHeader>
-                             <CardContent className="flex-grow flex flex-col">
-                               <a 
-                                 href={googleMapsUrl} 
-                                 target="_blank" 
-                                 rel="noopener noreferrer" 
-                                 className="w-full flex-grow bg-cover bg-center rounded-md flex items-center justify-center group" 
-                                 style={{backgroundImage: 'url(/map-placeholder.png)', minHeight: '300px'}}
-                                >
-                                 <div className="w-full h-full bg-black/30 group-hover:bg-black/50 transition-colors rounded-md flex items-center justify-center p-4">
-                                   <Button variant="secondary">
-                                     Open in Google Maps
-                                   </Button>
-                                 </div>
-                               </a>
+                             <CardContent className="flex-grow flex flex-col p-0">
+                               <div className="w-full flex-grow rounded-b-md overflow-hidden">
+                                <iframe
+                                    src={googleMapsEmbedUrl}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0, minHeight: '350px' }}
+                                    allowFullScreen={false}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                               </div>
                             </CardContent>
                         </Card>
                     </div>
