@@ -6,7 +6,7 @@ export default function ContactPage() {
     const address = "33/4/1 Patel Nagar, Saharanpur Road, Dehradun, Uttarakhand";
     const email = "asktrust.in@gmail.com";
     const phone = "+91 7017075603";
-    const googleMapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.062569278917!2d77.9943440755653!3d30.32081197478583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b230485c27d%3A0x89e73c381d4a464e!2sPatel%20Nagar%2C%20Dehradun%2C%20Uttarakhand%20248001%2C%20India!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus`;
+    const googleMapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3072.106644174089!2d78.02417057539367!3d30.31263764171911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDE4JzQ1LjgiTiA3OMKwMDEnMjguNSJF!5e1!3m2!1sen!2sin!4v1752749096046!5m2!1sen!2sin`;
 
 
     return (
@@ -69,7 +69,7 @@ export default function ContactPage() {
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, minHeight: '350px' }}
-                                    allowFullScreen={false}
+                                    allowFullScreen={true}
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
