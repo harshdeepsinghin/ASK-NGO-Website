@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        logo: ['Edo', 'Kalam', 'cursive'],
-        'headline-base': ['Kalam', 'cursive'],
+        body: ['var(--font-pt-sans)', 'sans-serif'],
+        logo: ['var(--font-edo)', 'var(--font-kalam)', 'cursive'],
+        'headline-base': ['var(--font-kalam)', 'cursive'],
         code: ['monospace'],
       },
       letterSpacing: {
