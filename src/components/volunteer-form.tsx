@@ -15,8 +15,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { sendVolunteerDetailsToTelegram } from "@/app/actions/send-telegram-message";
 
-const formSchema = z.object({
+export const volunteerFormSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
@@ -32,8 +33,8 @@ const formSchema = z.object({
 export function VolunteerForm() {
   const { toast } = useToast();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof volunteerFormSchema>>({
+    resolver: zodResolver(volunteerFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -42,18 +43,23 @@ export function VolunteerForm() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Here you would typically send the data to your server
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof volunteerFormSchema>) {
+    const result = await sendVolunteerDetailsToTelegram(values);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Registration Successful!",
-      description: "Thank you for your interest. We will get in touch with you soon.",
-    });
-    form.reset();
+    if (result.success) {
+      toast({
+        title: "Registration Successful!",
+        description: "Thank you for your interest. We have received your details and will be in touch.",
+        variant: 'default',
+      });
+      form.reset();
+    } else {
+      toast({
+        title: "Submission Failed",
+        description: result.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
