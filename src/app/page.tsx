@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex flex-col animate-in fade-in duration-500">
       <section className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
         <Image
-          src="/images/home1.png"
+          src="./images/home1.png"
           alt="Community members working together"
           layout="fill"
           objectFit="cover"
