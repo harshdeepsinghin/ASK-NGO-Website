@@ -5,9 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Handshake, HeartHandshake, Mail, Phone, Users, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 
 export default function GetInvolvedPage() {
+  const searchParams = useSearchParams();
+  const defaultTab = searchParams.get('tab') || 'donate';
 
   return (
     <div className="animate-in fade-in duration-500">
@@ -22,7 +25,7 @@ export default function GetInvolvedPage() {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Tabs defaultValue="donate" className="w-full">
+          <Tabs defaultValue={defaultTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="donate">Donate</TabsTrigger>
               <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
