@@ -1,16 +1,17 @@
 "use client";
 
-import { VolunteerForm } from "@/components/volunteer-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Handshake, HeartHandshake, Mail, Phone } from "lucide-react";
+import { Handshake, HeartHandshake, Mail, Phone, Users, ExternalLink } from "lucide-react";
+import Link from "next/link";
+
 
 export default function GetInvolvedPage() {
 
   return (
     <div className="animate-in fade-in duration-500">
-      <section className="bg-primary/10 py-12">
+      <section className="bg-primary/10 py-8 md:py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-headline text-4xl md:text-5xl font-bold">Get Involved</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
@@ -56,13 +57,21 @@ export default function GetInvolvedPage() {
             <TabsContent value="volunteer" className="mt-8">
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-headline">Register as a Volunteer</CardTitle>
+                  <CardTitle className="font-headline flex items-center gap-2">
+                    <Users className="h-6 w-6 text-primary" />
+                    Become a Volunteer
+                  </CardTitle>
                   <CardDescription>
-                    Join our team of passionate volunteers and dedicate your time and skills to a noble cause. Fill out the form below to get started.
+                    Ready to make a difference with your time and skills? Click the button below to fill out our volunteer registration form. We're excited to have you on board!
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <VolunteerForm />
+                  <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf9hh4zV2XGV2Y1L7l2O5MLucf6bWU-ZA_nabPN8mOHu0WVrg/viewform?usp=preview" target="_blank">
+                      Register on Google Forms
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </TabsContent>
