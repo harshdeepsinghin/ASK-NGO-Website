@@ -44,7 +44,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
                <Image src="./logo.png" alt="Ardas Samaj Kalyan Logo" width={40} height={10} className="object-contain" priority/>
-           <span className="font-logo-text text-xl font-bold text-foreground hidden sm:inline-block">
+           <span className="font-logo-text text-xl font-bold text-foreground inline-block">
             Ardas Samaj Kalyan
           </span>
         </Link>
