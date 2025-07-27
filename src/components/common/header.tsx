@@ -71,8 +71,8 @@ export function Header() {
                  <div className="mb-6">
                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
                       <Image src="./logo.png" alt="Ardas Samaj Kalyan Logo" width={40} height={10} className="object-contain" priority/>
-                       <span className="font-logo-text text-xl font-bold text-foreground">
-                        Ardas Samaj Kalyan
+                      <span className="ml-2 text-xs font-semibold text-foreground">
+                        ARDAS SAMAJ KALYAN
                       </span>
                     </Link>
                 </div>
