@@ -42,8 +42,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-               <Image src="./logo.png" alt="Ardas Samaj Kalyan Logo" width={40} height={10} className="object-contain" priority/>
+   <Link href="/" className="flex items-center gap-2">
+     <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
            <span className="font-logo-text text-xl font-bold text-foreground inline-block">
             Ardas Samaj Kalyan
           </span>
@@ -69,8 +69,8 @@ export function Header() {
             <SheetContent side="right">
               <div className="p-4">
                  <div className="mb-6">
-                   <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
-                      <Image src="./logo.png" alt="Ardas Samaj Kalyan Logo" width={40} height={10} className="object-contain" priority/>
+             <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
+               <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
                       <span className="ml-2 text-xs font-semibold text-foreground">
                         ARDAS SAMAJ KALYAN
                       </span>

@@ -58,6 +58,18 @@ const beneficiaries = [
     "Provided RPL trainings with THSC"
 ];
 
+// Additional initiative-style programs provided by user
+const initiativePrograms = [
+  { id: 'covid-food', title: 'COVID Relief: Food Distribution', summary: 'Distributed essential food packets to vulnerable families during the pandemic lockdowns ensuring food security.' },
+  { id: 'tree-plantation', title: 'Tree Plantation Drive', summary: 'Organized community-led plantation drives promoting environmental sustainability and awareness.' },
+  { id: 'cyber-security', title: 'Cyber Security Awareness', summary: 'Workshops educating youth and community members on safe digital practices and online fraud prevention.' },
+  { id: 'traffic-awareness', title: 'Traffic Awareness Campaign', summary: 'Sessions and street activities to promote road safety, responsible driving, and pedestrian awareness.' },
+  { id: 'summer-camp', title: 'Summer Camp (Children)', summary: 'Holistic development camp including creativity, basic computing, life skills, and recreational activities.' },
+  { id: 'smartphone-photography', title: 'Smartphone Photography Workshop', summary: 'Training participants to capture impactful images using mobile devices—framing, light, storytelling.' },
+  { id: 'artisan-camp', title: 'Artisan Skill Camp', summary: 'Hands-on exposure to local crafts supporting creativity, self-reliance, and cultural preservation.' },
+  { id: 'multispeciality-camp', title: 'बहुदेशीय शिविर (Multi-speciality Camp)', summary: 'Integrated camp offering health check-ups, counseling, and access to social welfare resources.' },
+];
+
 export default function ProgramsPage() {
   return (
     <div className="animate-in fade-in duration-500">
@@ -186,6 +198,27 @@ export default function ProgramsPage() {
             </Card>
         </div>
        </section>
+
+        <section className="py-16 md:py-24 bg-primary/5">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="font-headline text-3xl font-semibold text-center mb-4">Community & Special Initiatives</h2>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+              Alongside our core programs we regularly conduct targeted initiatives responding to emerging needs, seasonal opportunities, and holistic community upliftment.
+            </p>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {initiativePrograms.map(p => (
+                <Card key={p.id} className="h-full flex flex-col border-primary/20 hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="font-headline text-xl leading-snug">{p.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-muted-foreground text-sm leading-relaxed">
+                    {p.summary}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
     </div>
   );
 }

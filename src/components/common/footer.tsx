@@ -10,8 +10,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link href="/" className="mb-4 inline-flex items-center gap-2">
-               <Image src="./logo.png" alt="Ardas Samaj Kalyan Logo" width={40} height={10} className="object-contain" priority/>
+        <Link href="/" className="mb-4 inline-flex items-center gap-2">
+          <Image src="/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
                 <span className="font-logo-text text-xl font-bold text-foreground">
                   Ardas Samaj Kalyan
                 </span>

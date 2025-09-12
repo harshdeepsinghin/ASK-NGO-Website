@@ -9,11 +9,11 @@ export default function Home() {
     <div className="flex flex-col animate-in fade-in duration-500">
       <section className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
         <Image
-          src="./images/home1.png"
+          src="/images/home1.png"
           alt="Community members working together"
-          layout="fill"
-          objectFit="cover"
-          className="absolute z-0"
+          fill
+          priority
+          className="absolute z-0 object-cover"
           data-ai-hint="community help"
         />
         <div className="absolute inset-0 bg-black/50 z-10" />
@@ -89,6 +89,23 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild variant="link" className="text-primary text-lg">
               <Link href="/programs">Learn More About Our Programs &rarr;</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="initiatives" className="py-12 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto px-4">
+          <h2 className="font-headline text-2xl md:text-3xl font-semibold text-center mb-2">Community Initiatives</h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8 text-sm md:text-base">From COVID food relief to tree plantation and cyber safety, we respond to real community needs with focused action.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['COVID Relief', 'Tree Plantation', 'Cyber Security', 'Traffic Awareness', 'Summer Camp', 'Photography Workshop', 'Artisan Camp', 'बहुदेशीय शिविर'].map(tag => (
+              <span key={tag} className="bg-background border px-3 py-1 rounded-full text-xs md:text-sm text-muted-foreground hover:border-primary/50 transition-colors">{tag}</span>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="ghost" size="sm" className="text-primary">
+              <Link href="/programs#community-initiatives">Explore All Initiatives →</Link>
             </Button>
           </div>
         </div>
