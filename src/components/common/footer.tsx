@@ -19,6 +19,9 @@ export function Footer() {
             <p className="text-muted-foreground max-w-md">
               A non-profit organization committed to empowering marginalized communities through education, skill development, and comprehensive support.
             </p>
+            <p className="mt-3 text-xs text-muted-foreground">
+              NITI Aayog Unique ID: <span className="font-medium text-foreground">UA 2020 0259841</span>
+            </p>
           </div>
           <div>
             <h3 className="font-headline text-lg font-semibold mb-4">Quick Links</h3>

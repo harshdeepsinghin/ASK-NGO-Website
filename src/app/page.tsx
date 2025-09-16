@@ -1,7 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpenText, Handshake, HeartHandshake, Users } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ardas Samaj Kalyan NGO | Empowering Communities",
+  description: "Official website of Ardas Samaj Kalyan NGO: skill development, prisoner rehabilitation, women's SHG empowerment, youth development, community initiatives.",
+  keywords: [
+    "NGO", "Ardas Samaj Kalyan", "community development", "women empowerment", "skill development", "youth programs", "rehabilitation", "Uttarakhand NGO"
+  ],
+  openGraph: {
+    title: "Ardas Samaj Kalyan NGO",
+    description: "Empowering communities through education, skills, and social upliftment.",
+    url: "https://asktrust.in/",
+    siteName: "ASK Trust",
+    images: [
+      { url: "/images/home1.png", width: 1200, height: 630, alt: "Ardas Samaj Kalyan Hero" }
+    ],
+    locale: "en_IN",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ardas Samaj Kalyan NGO",
+    description: "Empowering communities through education, skills, and social upliftment.",
+    images: ["/images/home1.png"],
+  },
+};
 import Image from "next/image";
+import { Testimonials } from "@/components/common/testimonials";
 import Link from "next/link";
 
 export default function Home() {
@@ -44,6 +71,29 @@ export default function Home() {
           <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground">
             To create a self-reliant society by empowering individuals from marginalized communities. We focus on providing essential skills, education, and support systems that enable sustainable growth and a brighter future for all.
           </p>
+        </div>
+      </section>
+
+      <section id="impact" className="py-12 md:py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container mx-auto px-4">
+          <h2 className="font-headline text-2xl md:text-3xl font-semibold text-center mb-2">Our Impact</h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10 text-sm md:text-base">
+            Tangible outcomes created with community partners, volunteers, and beneficiaries.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            {[
+              { label: 'Meals Distributed', value: '10K+' },
+              { label: 'Trees Planted', value: '2.5K+' },
+              { label: 'Women Trained', value: '800+' },
+              { label: 'Youth Mentored', value: '500+' },
+            ].map(stat => (
+              <div key={stat.label} className="text-center group">
+                <div className="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight group-hover:scale-105 transition-transform">{stat.value}</div>
+                <div className="mt-2 text-xs md:text-sm uppercase tracking-wide text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[11px] md:text-xs text-muted-foreground/70 text-center mt-8">* Figures are cumulative estimates across initiatives and core programs.</p>
         </div>
       </section>
 
@@ -93,6 +143,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Testimonials
+        showText={false}
+        items={[
+          { id: "img-1", quote: "", name: "", imageSrc: "/images/testimonial-1.jpg" },
+          { id: "img-2", quote: "", name: "", imageSrc: "/images/testimonial-2.jpg" },
+        ]}
+      />
 
       <section id="initiatives" className="py-12 bg-primary/5 border-y border-primary/10">
         <div className="container mx-auto px-4">

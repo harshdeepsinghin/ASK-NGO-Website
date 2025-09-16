@@ -33,9 +33,9 @@ export function GetInvolvedTabs() {
                   <h3 className="font-semibold text-lg mb-2">Bank Transfer Details:</h3>
                   <div className="space-y-1 text-muted-foreground p-4 border rounded-md bg-secondary/30">
                     <p><strong>Account Name:</strong> Ardas Samaj Kalyan Samiti</p>
-                    <p><strong>Account Number:</strong> 50100476489371</p>
-                    <p><strong>Bank:</strong> HDFC BANK LTD</p>
-                    <p><strong>IFSC Code:</strong> HDFC0001303</p>
+                    <p><strong>Account Number:</strong> 921020022106218</p>
+                    <p><strong>Bank:</strong> AXIS BANK, CONVENT ROAD</p>
+                    <p><strong>IFSC Code:</strong> UTIB0003624</p>
                     <p><strong>Branch:</strong> Dehradun, Uttarakhand</p>
                   </div>
                   <p className="mt-4 text-sm text-muted-foreground">

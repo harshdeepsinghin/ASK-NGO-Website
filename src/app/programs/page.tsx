@@ -6,6 +6,22 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Group, HandHeart, Users } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Programs | Ardas Samaj Kalyan NGO",
+  description: "Explore core programs: prisoner rehabilitation, women's SHG empowerment, youth development, technical trainings, community initiatives, and capacity building.",
+  openGraph: {
+    title: "Programs | Ardas Samaj Kalyan NGO",
+    description: "Skill development, empowerment, and community upliftment initiatives.",
+    url: "https://asktrust.in/programs",
+    siteName: "ASK Trust",
+    images: [
+      { url: "/images/home1.png", width: 1200, height: 630, alt: "Programs Overview" }
+    ],
+    type: "website"
+  }
+};
 
 const programs = [
   {
@@ -199,7 +215,7 @@ export default function ProgramsPage() {
         </div>
        </section>
 
-        <section className="py-16 md:py-24 bg-primary/5">
+  <section id="community-initiatives" className="py-16 md:py-24 bg-primary/5">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="font-headline text-3xl font-semibold text-center mb-4">Community & Special Initiatives</h2>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">

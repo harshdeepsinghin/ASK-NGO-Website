@@ -13,6 +13,12 @@ const legalInfo = [
         ],
     },
     {
+        title: "NITI Aayog / NGO Darpan",
+        details: [
+            { label: "NITI Aayog Unique ID", value: "UA 2020 0259841" },
+        ],
+    },
+    {
         title: "Tax Information",
         details: [
             { label: "PAN Number", value: "AAHTA4244R" },
