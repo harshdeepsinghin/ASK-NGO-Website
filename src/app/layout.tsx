@@ -29,6 +29,16 @@ const edo = localFont({
 export const metadata: Metadata = {
   title: "Ardas Samaj Kalyan NGO",
   description: "Dedicated to social upliftment and community empowerment.",
+  // Set a stable origin so Open Graph/Twitter images resolve correctly in production
+  metadataBase: process.env.NODE_ENV === 'production' ? new URL('https://asktrust.in') : undefined,
+  icons: {
+    // Preferred PNG favicon (place your provided image at public/images/ask-favicon.png)
+    icon: [
+      { url: "/images/ask-favicon.png", type: "image/png" },
+      // Keep existing favicon.ico as fallback
+      { url: "/favicon.ico" },
+    ],
+  },
 };
 
 export default function RootLayout({
