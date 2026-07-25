@@ -92,10 +92,28 @@ export default {
             height: '0',
           },
         },
+        // NEW KEYFRAME FOR SMOOTH ENTRANCES
+        fadeInUp: {
+          '1%': { opacity: '0', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        headingShimmer: {
+          '0%': { opacity: '0', color: 'hsl(var(--muted-foreground))' },
+          '100%': { opacity: '1', color: 'hsl(var(--foreground))' },
+        },
+       
+        pureFadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        //  NEW ANIMATION UTILITY CLASS
+        'fade-in-up': 'fadeInUp 0.2s ease-out forwards',
+        'heading-shimmer': 'headingShimmer 0.8s ease-out forwards',
+        'pure-fade-in': 'pureFadeIn 0.8s ease-out forwards',
       },
     },
   },

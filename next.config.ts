@@ -1,10 +1,15 @@
 import type { NextConfig } from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
-  // Only set assetPrefix in production so local dev uses default localhost paths
-  assetPrefix: isProd ? 'https://asktrust.in' : undefined,
+  //  Required for static HTML builds (GitHub Pages & Cloudflare Pages)
+  output: 'export',
+  
+  // Next.js to natively route all assets through  GitHub repository subfolder
+  basePath: basePath,
+  assetPrefix: basePath,
+
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -12,6 +17,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // Disables server-side image optimization so raw images can load statically
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

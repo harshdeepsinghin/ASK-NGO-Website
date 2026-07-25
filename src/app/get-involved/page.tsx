@@ -5,16 +5,22 @@ import { GetInvolvedTabs } from '@/components/get-involved-tabs';
 export default function GetInvolvedPage() {
 
   return (
-    <div className="animate-in fade-in duration-500">
-      <section className="bg-primary/10 py-8 md:py-12">
+    <>
+  
+      <section className="bg-[hsl(20,85%,65%)] py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold">Get Involved</h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
-            Your support is crucial to our mission. Discover the different ways you can contribute and make a real impact.
+          
+         
+          <h1 className="font-headline text-4xl md:text-5xl font-bold opacity-0 animate-slide-up">
+            Get Involved
+          </h1>
+          
+          <p className="mt-4 text-lg max-w-3xl mx-auto text-foreground opacity-0 animate-reveal  [animation-delay:420ms]">
+         Your support is crucial to our mission. Discover the different ways you can contribute and make a real impact.
           </p>
+          
         </div>
       </section>
-
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-4xl">
            <Suspense fallback={
@@ -32,6 +38,6 @@ export default function GetInvolvedPage() {
           </Suspense>
         </div>
       </section>
-    </div>
+    </>
   );
 }

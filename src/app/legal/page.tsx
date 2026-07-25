@@ -7,9 +7,7 @@ const legalInfo = [
         details: [
             { label: "Registered under", value: "Indian Trusts Act, 1882" },
             { label: "Registration Number", value: "IV-040300188" },
-            { label: "Date of Registration", value: "August 24, 2021" },
-            { label: "12A Registration Number", value: "AAHTA4244RE20221" },
-            { label: "Date of 12A Registration", value: "16-04-2022" },
+            { label: "Date of Registration", value: "December 13, 2018" },
         ],
     },
     {
@@ -24,16 +22,7 @@ const legalInfo = [
             { label: "PAN Number", value: "AAHTA4244R" },
         ],
     },
-    {
-        title: "Tax Exemption Approvals",
-        details: [
-            { label: "Section 80G Approval", value: "Provisionally approved" },
-            { label: "80G URN", value: "AAHTA4244RF20221" },
-            { label: "Date of 80G Approval", value: "16-04-2022" },
-            { label: "Validity", value: "Approved for Assessment Years 2023-24 to 2025-26" },
-            { label: "Details", value: "Donations are eligible for tax deduction under section 80G of the Income Tax Act." },
-        ],
-    },
+
     {
         title: "CSR Compliance",
         details: [
@@ -46,38 +35,53 @@ const legalInfo = [
 
 export default function LegalPage() {
     return (
-        <div className="animate-in fade-in duration-500">
-            <section className="bg-primary/10 py-12">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="font-headline text-4xl md:text-5xl font-bold">Legal &amp; Tax Information</h1>
-                    <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
-                        We are committed to maintaining complete transparency in our operations. Here are our legal and tax credentials.
-                    </p>
-                </div>
-            </section>
+        <>
+       
+      <section className="bg-[hsl(20,85%,65%)] py-12">
+        <div className="container mx-auto px-4 text-center">
+          
+          <h1 className="font-headline text-4xl md:text-5xl font-bold opacity-0 animate-slide-up">
+            Legal &amp; Tax Information
+          </h1>
+          
+         
+          <p className="mt-4 text-lg max-w-3xl mx-auto text-foreground opacity-0 animate-reveal  [animation-delay:420ms]">
+            We are committed to maintaining complete transparency in our operations. Here are our legal and tax credentials.
+          </p>
+          
+        </div>
+      </section>
             
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="space-y-8">
                         {legalInfo.map((section) => (
-                             <Card key={section.title}>
-                                <CardHeader>
-                                    <CardTitle className="font-headline flex items-center gap-3">
-                                        <BadgeCheck className="h-6 w-6 text-accent" />
-                                        {section.title}
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-3">
-                                        {section.details.map((item, index) => (
-                                            <li key={index} className="flex flex-col sm:flex-row">
-                                                <span className="font-semibold w-full sm:w-1/3">{item.label}:</span>
-                                                <span className="text-muted-foreground w-full sm:w-2/3">{item.value}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                             </Card>
+        <Card key={section.title}>
+    <CardHeader>
+      
+        <CardTitle className="font-headline text-3xl font-extrabold text-[#222222] animate-divine-pulse flex items-center gap-3">
+            <BadgeCheck className="h-6 w-6 text-accent shrink-0" />
+            {section.title}
+        </CardTitle>
+    </CardHeader>
+    <CardContent>
+        <ul className="space-y-3">
+            {section.details.map((item, index) => (
+                <li 
+                    key={index} 
+                    className="flex flex-col sm:flex-row transition-all duration-300 hover:text-[hsl(20,85%,49%)] hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.8)] cursor-pointer group"
+                >
+                    <span className="font-semibold w-full sm:w-1/3 transition-colors duration-300 group-hover:text-[hsl(20,85%,49%)]">
+                        {item.label}:
+                    </span>
+                    <span className="text-muted-foreground w-full sm:w-2/3 transition-colors duration-300 group-hover:text-foreground">
+                        {item.value}
+                    </span>
+                </li>
+            ))}
+        </ul>
+    </CardContent>
+</Card>                   
                         ))}
                     </div>
                      <div className="mt-12 text-center text-sm text-muted-foreground bg-secondary/50 p-4 rounded-md">
@@ -85,6 +89,7 @@ export default function LegalPage() {
                     </div>
                 </div>
             </section>
-        </div>
-    )
+       
+        </>
+    );
 }
