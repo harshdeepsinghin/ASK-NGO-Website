@@ -231,76 +231,74 @@ export default function Home() {
 <section id="get-involved" className="py-16 md:py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative">
           
-          {/* DESKTOP LEFT: Floating Instagram Button (Hidden on Mobile) */}
+          {/* DESKTOP/LAPTOP LEFT: Floating Instagram Button (Scales dynamically on smaller laptops) */}
           <a 
             href="https://www.instagram.com/asktrust/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            /* Added p-4 here to increase the invisible hover trigger area */
-            className="hidden md:flex flex-col items-center justify-center absolute left-0 lg:left-6 top-1/2 -translate-y-1/2 group z-20 gap-2 p-4"
+            className="hidden md:flex flex-col items-center justify-center absolute left-0 lg:left-2 xl:left-6 top-1/2 -translate-y-1/2 group z-20 gap-2 p-2 xl:p-4"
           >
             {/* The Floating Tooltip (Hover only) */}
-            <span className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md shadow-lg opacity-0 transition-all duration-900 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-2">
+            <span className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs xl:text-sm font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md shadow-lg opacity-0 transition-all duration-900 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-2">
               Click to Follow!
             </span>
             
-            {/* The Icon Wrapper  */}
-            <div className="p-5 rounded-full bg-background border-2 shadow-lg group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#e6683c] group-hover:to-[#bc1888] group-hover:text-white group-hover:border-transparent transition-all duration-900 hover:scale-110">
+            {/* The Icon Wrapper (Paddings & sizes scale with screen width) */}
+            <div className="p-2.5 lg:p-4 xl:p-5 rounded-full bg-background border-2 shadow-lg group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#e6683c] group-hover:to-[#bc1888] group-hover:text-white group-hover:border-transparent transition-all duration-900 hover:scale-110">
               
-              <Instagram className="w-40 h-40 transition-colors" />
+              {/* Icon shrinks smoothly: 64px on mid-laptops -> 80px on standard -> 112px on desktop -> 160px on wide screens */}
+              <Instagram className="w-16 h-16 lg:w-20 lg:h-20 xl:w-28 xl:h-28 2xl:w-40 2xl:h-40 transition-colors" />
             </div>
 
             {/* Permanent text below the icon */}
-            <span className="text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
+            <span className="text-xs xl:text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
               Instagram
             </span>
           </a>
 
-          {/* DESKTOP RIGHT: Floating LinkedIn Button (Hidden on Mobile) */}
+          {/* DESKTOP/LAPTOP RIGHT: Floating LinkedIn Button (Scales dynamically on smaller laptops) */}
           <a 
             href="https://www.linkedin.com/company/ardas-samaj-kalyan-trust/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            
-            className="hidden md:flex flex-col items-center justify-center absolute right-0 lg:right-6 top-1/2 -translate-y-1/2 group z-20 gap-2 p-4"
+            className="hidden md:flex flex-col items-center justify-center absolute right-0 lg:right-2 xl:right-6 top-1/2 -translate-y-1/2 group z-20 gap-2 p-2 xl:p-4"
           >
             {/* The Floating Tooltip (Hover only) */}
-            <span className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md shadow-lg opacity-0 transition-all duration-900 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-2">
+            <span className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs xl:text-sm font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md shadow-lg opacity-0 transition-all duration-900 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-2">
               Let's Connect!
             </span>
             
-            {/* The Icon Wrapper  */}
-            <div className="p-5 rounded-full bg-background border-2 shadow-lg group-hover:bg-[#0A66C2] group-hover:text-white group-hover:border-transparent transition-all duration-900 hover:scale-110">
+            {/* The Icon Wrapper */}
+            <div className="p-2.5 lg:p-4 xl:p-5 rounded-full bg-background border-2 shadow-lg group-hover:bg-[#0A66C2] group-hover:text-white group-hover:border-transparent transition-all duration-900 hover:scale-110">
               
-              <Linkedin className="w-40 h-40 transition-colors" />
+              <Linkedin className="w-16 h-16 lg:w-20 lg:h-20 xl:w-28 xl:h-28 2xl:w-40 2xl:h-40 transition-colors" />
             </div>
 
             {/* Permanent text below the icon */}
-            <span className="text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
+            <span className="text-xs xl:text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
               LinkedIn
             </span>
           </a>
 
         
-          <h2 className="font-headline text-4xl font-extrabold text-[#222222] animate-divine-pulse text-center mb-4">Join Us in Making a Difference</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+          <h2 className="font-headline text-3xl lg:text-4xl font-extrabold text-[#222222] animate-divine-pulse text-center mb-4">Join Us in Making a Difference</h2>
+          <p className="mt-4 max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto text-base lg:text-lg text-muted-foreground">
             Your support can change lives. Whether you donate, volunteer, or partner with us, you become a vital part of our mission.
             
-            {/* Changes based on screen size */}
-            <span className="block mt-3 text-xl font-semibold text-[hsl(20,85%,40%)]">
+            <span className="block mt-3 text-lg lg:text-xl font-semibold text-[hsl(20,85%,40%)]">
               Stay updated on our journey! Follow our social media handles by clicking the icons <span className="hidden md:inline">on the sides</span><span className="inline md:hidden">below</span>.
             </span>
           </p>
           <div className="mt-8 flex justify-center items-center gap-8">
              <div className="text-center">
-                <HeartHandshake className="h-12 w-12 text-primary mx-auto"/>
-                <h3 className="text-xl font-semibold mt-2">Donate</h3>
-                <p className="text-muted-foreground mt-1">Your contribution helps us fund our programs.</p>
+                <HeartHandshake className="h-10 w-10 lg:h-12 lg:w-12 text-primary mx-auto"/>
+                <h3 className="text-lg lg:text-xl font-semibold mt-2">Donate</h3>
+                <p className="text-muted-foreground text-sm lg:text-base mt-1">Your contribution helps us fund our programs.</p>
              </div>
              <div className="text-center">
-                <Handshake className="h-12 w-12 text-primary mx-auto"/>
-                <h3 className="text-xl font-semibold mt-2">Partner</h3>
-                <p className="text-muted-foreground mt-1">Collaborate with us to expand our reach.</p>
+                <Handshake className="h-10 w-10 lg:h-12 lg:w-12 text-primary mx-auto"/>
+                <h3 className="text-lg lg:text-xl font-semibold mt-2">Partner</h3>
+                <p className="text-muted-foreground text-sm lg:text-base mt-1">Collaborate with us to expand our reach.</p>
              </div>
           </div>
           <div className="mt-10 relative z-30">
@@ -314,19 +312,20 @@ export default function Home() {
            </div>
 
            
+           {/* MOBILE FALLBACK: Only shows on mobile devices (< 768px) */}
            <div className="flex md:hidden justify-center items-center gap-8 mt-16 pt-8 border-t border-border/50 relative z-30">
               <a href="https://www.instagram.com/asktrust/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group">
-                <div className="p-6 rounded-full bg-background border-2 shadow-md group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#e6683c] group-hover:to-[#bc1888] group-hover:text-white transition-all duration-900 active:scale-95">
-                  <Instagram className="w-24 h-24 transition-colors" />
+                <div className="p-4 rounded-full bg-background border-2 shadow-md group-hover:bg-gradient-to-tr group-hover:from-[#f09433] group-hover:via-[#e6683c] group-hover:to-[#bc1888] group-hover:text-white transition-all duration-900 active:scale-95">
+                  <Instagram className="w-12 h-12 transition-colors" />
                 </div>
-                <span className="text-base font-bold text-muted-foreground">Instagram</span>
+                <span className="text-sm font-bold text-muted-foreground">Instagram</span>
               </a>
 
               <a href="https://www.linkedin.com/company/ardas-samaj-kalyan-trust/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group">
-                <div className="p-6 rounded-full bg-background border-2 shadow-md group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-900 active:scale-95">
-                  <Linkedin className="w-24 h-24 transition-colors" />
+                <div className="p-4 rounded-full bg-background border-2 shadow-md group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-900 active:scale-95">
+                  <Linkedin className="w-12 h-12 transition-colors" />
                 </div>
-                <span className="text-base font-bold text-muted-foreground">LinkedIn</span>
+                <span className="text-sm font-bold text-muted-foreground">LinkedIn</span>
               </a>
            </div>
 
