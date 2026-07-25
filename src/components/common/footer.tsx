@@ -2,8 +2,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -13,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
-              <Image src={`${basePath}/images/logo.png`} alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
+              <Image src="/images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
               <span className="font-logo-text text-xl font-bold text-foreground">
                 Ardas Samaj Kalyan
               </span>

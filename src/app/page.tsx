@@ -44,14 +44,12 @@ import { WallOfFame } from "@/components/common/wall-of-fame";
 import Link from "next/link";
 
 export default function Home() {
- 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   return (
     <>
     <section className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
         <Image
-          src={`${basePath}/images/home1.png`}
+          src="/images/home1.png"
           alt="Community members working together"
           fill
           priority

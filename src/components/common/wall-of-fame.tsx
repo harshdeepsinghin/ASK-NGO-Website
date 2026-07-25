@@ -4,39 +4,36 @@
 import Image from "next/image";
 import { useState } from "react"; 
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
-
 const achievements = [
-  { id: "cert-1", src: `${basePath}/images/fame/certificate_1ask.png`, alt: "ASK Certificate 1" },
-  { id: "cert-2", src: `${basePath}/images/fame/certificate_2ask.png`, alt: "ASK Certificate 2" },
-  { id: "cert-3", src: `${basePath}/images/fame/certificate_3ask.png`, alt: "ASK Certificate 3" },
-  { id: "dm-support", src: `${basePath}/images/fame/DM_support.jpeg`, alt: "DM Support" },
+  { id: "cert-1", src: "/images/fame/certificate_1ask.png", alt: "ASK Certificate 1" },
+  { id: "cert-2", src: "/images/fame/certificate_2ask.png", alt: "ASK Certificate 2" },
+  { id: "cert-3", src: "/images/fame/certificate_3ask.png", alt: "ASK Certificate 3" },
+  { id: "dm-support", src: "/images/fame/DM_support.jpeg", alt: "DM Support" },
   
-  { id: "cm-cutout", src: `${basePath}/images/fame/cm_cutout.jpeg`, alt: "CM Cutout" },
-  { id: "news-8", src: `${basePath}/images/fame/news_8.jpeg`, alt: "News Feature 8" },
-  { id: "hd-image-2", src: `${basePath}/images/fame/hd_image2.jpeg`, alt: "HD Event Image 2" },
-  { id: "news-6", src: `${basePath}/images/fame/news_6.jpeg`, alt: "News Feature 6" },
+  { id: "cm-cutout", src: "/images/fame/cm_cutout.jpeg", alt: "CM Cutout" },
+  { id: "news-8", src: "/images/fame/news_8.jpeg", alt: "News Feature 8" },
+  { id: "hd-image-2", src: "/images/fame/hd_image2.jpeg", alt: "HD Event Image 2" },
+  { id: "news-6", src: "/images/fame/news_6.jpeg", alt: "News Feature 6" },
   
-  { id: "news-5", src: `${basePath}/images/fame/news_5.jpeg`, alt: "News Feature 5" },
-  { id: "hd-news", src: `${basePath}/images/fame/hd_news.jpeg`, alt: "HD News Feature" },
-  { id: "news-3", src: `${basePath}/images/fame/news_3.jpeg`, alt: "News Feature 3" },
-  { id: "news-2", src: `${basePath}/images/fame/News_2.jpeg`, alt: "News Feature 2" },
+  { id: "news-5", src: "/images/fame/news_5.jpeg", alt: "News Feature 5" },
+  { id: "hd-news", src: "/images/fame/hd_news.jpeg", alt: "HD News Feature" },
+  { id: "news-3", src: "/images/fame/news_3.jpeg", alt: "News Feature 3" },
+  { id: "news-2", src: "/images/fame/News_2.jpeg", alt: "News Feature 2" },
   
-  { id: "news-1", src: `${basePath}/images/fame/news1jpeg.jpeg`, alt: "News Feature 1" },
-  { id: "donation-1", src: `${basePath}/images/fame/donation_campaign1.jpeg`, alt: "Donation Campaign" },
-  { id: "headline-1", src: `${basePath}/images/fame/headline1ask.png`, alt: "ASK Headline 1" },
-  { id: "headline-2", src: `${basePath}/images/fame/headline2ask.png`, alt: "ASK Headline 2" },
-  { id: "headline-new1", src: `${basePath}/images/fame/ASK_new1.jpeg`, alt: "ASK Headline New 1" },
-  { id: "headline-new2", src: `${basePath}/images/fame/ASK_new2.jpeg`, alt: "ASK Headline New 2" },
-  { id: "headline-new3", src: `${basePath}/images/fame/ASK_new3.jpeg`, alt: "ASK Headline New 3" },
-  { id: "headline-new4", src: `${basePath}/images/fame/ASK_new4.jpeg`, alt: "ASK Headline New 4" },
-  { id: "headline-new5", src: `${basePath}/images/fame/ASK_new5.jpeg`, alt: "ASK Headline New 5" },
-  { id: "headline-new6", src: `${basePath}/images/fame/ASK_new6.jpeg`, alt: "ASK Headline New 6" },
-  { id: "headline-3", src: `${basePath}/images/fame/headline3ask.png`, alt: "ASK Headline 3" },
-  { id: "headline-4", src: `${basePath}/images/fame/headline4ask.png`, alt: "ASK Headline 4" },
-  { id: "testimonial-1", src: `${basePath}/images/fame/Testimonials_1.png`, alt: "Testimonial 1" },
-  { id: "testimonial-2", src: `${basePath}/images/fame/Testimonials_2 .png`, alt: "Testimonial 2" },
+  { id: "news-1", src: "/images/fame/news1jpeg.jpeg", alt: "News Feature 1" },
+  { id: "donation-1", src: "/images/fame/donation_campaign1.jpeg", alt: "Donation Campaign" },
+  { id: "headline-1", src: "/images/fame/headline1ask.png", alt: "ASK Headline 1" },
+  { id: "headline-2", src: "/images/fame/headline2ask.png", alt: "ASK Headline 2" },
+  { id: "headline-new1", src: "/images/fame/ASK_new1.jpeg", alt: "ASK Headline New 1" },
+  { id: "headline-new2", src: "/images/fame/ASK_new2.jpeg", alt: "ASK Headline New 2" },
+  { id: "headline-new3", src: "/images/fame/ASK_new3.jpeg", alt: "ASK Headline New 3" },
+  { id: "headline-new4", src: "/images/fame/ASK_new4.jpeg", alt: "ASK Headline New 4" },
+  { id: "headline-new5", src: "/images/fame/ASK_new5.jpeg", alt: "ASK Headline New 5" },
+  { id: "headline-new6", src: "/images/fame/ASK_new6.jpeg", alt: "ASK Headline New 6" },
+  { id: "headline-3", src: "/images/fame/headline3ask.png", alt: "ASK Headline 3" },
+  { id: "headline-4", src: "/images/fame/headline4ask.png", alt: "ASK Headline 4" },
+  { id: "testimonial-1", src: "/images/fame/Testimonials_1.png", alt: "Testimonial 1" },
+  { id: "testimonial-2", src: "/images/fame/Testimonials_2.png", alt: "Testimonial 2" },
 ];
 
 export function WallOfFame() {

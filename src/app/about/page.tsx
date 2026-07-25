@@ -19,7 +19,7 @@ export default function AboutPage() {
       name: "Mr. George Ivan Gregory Mann",
       role: "Guardian & Advisor",
       message: "Ever since its inception, the Ex-students of Carman School along with Mr. and Mrs. Rajveer Singh have been taking up various tasks by which society in general and the poor and needy in particular have benefitted. We at ASK are extremely grateful to God and to the many people in this State who have come forward to help us achieve the goals we have set from time to time. Thank you and may God Bless us all.",
-      imageUrl: `${basePath}/images/Guardian Ask.jpeg`
+      imageUrl: `${basePath}/images/Guardian_Ask.jpeg`
     },
   ];
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image 
-                src={`${basePath}/images/designed_by_raunak.png`}
+                src="/images/designed_by_raunak.png"
                 alt="NGO team working" 
                 width={600} 
                 height={400} 
