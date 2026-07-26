@@ -1,12 +1,12 @@
 import type { NextConfig } from 'next';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+// github pages only
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const basePath = isGithubActions ? '/ASK-NGO-Website' : '';
 
 const nextConfig: NextConfig = {
-  //  Required for static HTML builds (GitHub Pages & Cloudflare Pages)
   output: 'export',
   
-  // Next.js to natively route all assets through  GitHub repository subfolder
   basePath: basePath,
   assetPrefix: basePath,
 
@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    // Disables server-side image optimization so raw images can load statically
     unoptimized: true,
     remotePatterns: [
       {
