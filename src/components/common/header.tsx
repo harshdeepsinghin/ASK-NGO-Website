@@ -77,7 +77,7 @@ const NavLink = ({ href, label, className }: { href: string; label: string, clas
                 {/* Updated the image path to point to the correct images folder */}
                 <div className="mb-6">
                   <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
-                    <Image src="/images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
+                    <Image src="images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
                     <span className="ml-2 text-xs font-semibold text-foreground">
                       ARDAS SAMAJ KALYAN
                     </span>
