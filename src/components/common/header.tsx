@@ -46,7 +46,7 @@ const NavLink = ({ href, label, className }: { href: string; label: string, clas
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
    <Link href="/" className="flex items-center gap-2">
-     <Image src="/images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
+     <Image src="images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
            <span className="font-logo-text text-xl font-bold text-foreground inline-block">
             Ardas Samaj Kalyan
           </span>
@@ -77,7 +77,7 @@ const NavLink = ({ href, label, className }: { href: string; label: string, clas
                 {/* Updated the image path to point to the correct images folder */}
                 <div className="mb-6">
                   <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
-                    <Image src="/images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
+                    <Image src="images/logo.png" alt="Ardas Samaj Kalyan Logo" width={120} height={40} className="h-10 w-auto object-contain" priority/>
                     <span className="ml-2 text-xs font-semibold text-foreground">
                       ARDAS SAMAJ KALYAN
                     </span>

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [
       { 
         //  Dynamically builds the absolute URL for link sharing previews
-        url: `${siteUrl}${basePath}/images/home1.png`, 
+        url: `${siteUrl}${basePath}images/home1.png`, 
         width: 1200, 
         height: 630, 
         alt: "Ardas Samaj Kalyan Hero" 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ardas Samaj Kalyan NGO",
     description: "Empowering communities through education, skills, and social upliftment.",
-    images: [`${siteUrl}${basePath}/images/home1.png`],
+    images: [`${siteUrl}${basePath}images/home1.png`],
   },
 };
 import Image from "next/image";
@@ -49,7 +49,7 @@ export default function Home() {
     <>
     <section className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
         <Image
-          src="/images/home1.png"
+          src="images/home1.png"
           alt="Community members working together"
           fill
           priority

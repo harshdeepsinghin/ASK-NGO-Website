@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: `${basePath}/favicon.ico`,
+      url: `${basePath}favicon.ico`,
     },
   ],
 };

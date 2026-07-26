@@ -13,13 +13,13 @@ export default function AboutPage() {
       role: "President & Founder",
       message: "With aims for the growth of our country, ASK trust was established for women empowerment, livelihood generation for the underprivileged, especially jail inmates and women self-help groups. We also work for the development of the youth. Our aim is not just teaching people but to empower them with the abilities to have access to all the basic necessities of life, enabling them to earn respect and dignity for themselves and their future. The backbone of ASK trust is its Team, Sponsors, Volunteers, and all supporters.",
       //  Dynamic path applied to local image
-      imageUrl: `${basePath}/images/NGO_founder.jpeg`
+      imageUrl: "images/NGO_founder.jpeg"
     },
     {
       name: "Mr. George Ivan Gregory Mann",
       role: "Guardian & Advisor",
       message: "Ever since its inception, the Ex-students of Carman School along with Mr. and Mrs. Rajveer Singh have been taking up various tasks by which society in general and the poor and needy in particular have benefitted. We at ASK are extremely grateful to God and to the many people in this State who have come forward to help us achieve the goals we have set from time to time. Thank you and may God Bless us all.",
-      imageUrl: `${basePath}/images/Guardian_Ask.jpeg`
+      imageUrl: "images/Guardian_Ask.jpeg"
     },
   ];
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image 
-                src="/images/designed_by_raunak.png"
+                src="images/designed_by_raunak.png"
                 alt="NGO team working" 
                 width={600} 
                 height={400} 
