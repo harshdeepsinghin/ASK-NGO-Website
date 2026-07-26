@@ -75,7 +75,7 @@ export function GetInvolvedTabs() {
                     ))}
                   </div>
                   <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-                    After making a donation, please email us at <a href="mailto:asktrust.in@gmail.com" className="text-primary hover:underline font-medium transition-colors">asktrust.in@gmail.com</a> with the transaction details for your receipt.
+                    After making a donation, please email us at <a href="mailto:asktrust.in@gmail.com" className="text-primary hover:underline font-medium transition-colors">asktrust.in@gmail.com</a> with the transaction details.
                   </p>
                 </CardContent>
               </Card>
