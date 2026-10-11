@@ -43,3 +43,8 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# cloudflare / wrangler
+.wrangler/
+ASK-NGO-Worker/out/
+ASK-NGO-Worker/.wrangler/
