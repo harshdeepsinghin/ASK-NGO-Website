@@ -1,4 +1,5 @@
 name = "ask-ngo-website"
+main = "./worker.js"
 workers_dev = true
 compatibility_date = "2026-10-11"
 

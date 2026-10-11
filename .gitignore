@@ -46,5 +46,3 @@ firestore-debug.log
 
 # cloudflare / wrangler
 .wrangler/
-ASK-NGO-Worker/out/
-ASK-NGO-Worker/.wrangler/
