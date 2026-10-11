@@ -1,0 +1,6 @@
+name = "ask-ngo-website"
+workers_dev = true
+compatibility_date = "2026-10-11"
+
+[assets]
+directory = "./out"
